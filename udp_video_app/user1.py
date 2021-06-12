@@ -1,4 +1,8 @@
-import cv2, socket, pickle, os,threading
+import cv2
+import socket 
+import pickle
+import threading
+
 def sender():
     s=socket.socket(socket.AF_INET , socket.SOCK_DGRAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 65536)
@@ -23,8 +27,8 @@ def sender():
 
 def receiver():
     sr=socket.socket(socket.AF_INET , socket.SOCK_DGRAM)
-    ip="192.168.43.229"      #Host IP
-    port = 3000       #Host Port
+    ip="192.168.43.229"     
+    port = 3000     
     sr.bind((ip,port))
 
     while True:
@@ -35,9 +39,7 @@ def receiver():
             # print(x)
             clientip = x[1][0]
             data=x[0]
-            # print(data)
             data=pickle.loads(data)
-            # print(type(data))
             data = cv2.imdecode(data, cv2.IMREAD_COLOR)
             cv2.imshow('receiver2', data)
             if cv2.waitKey(10) == 13:
