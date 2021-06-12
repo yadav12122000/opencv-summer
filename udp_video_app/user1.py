@@ -48,7 +48,7 @@ def receiver():
 
 
 
-t1 = threading.Thread(target=sender)
-t2 = threading.Thread(target=receiver)
-t1.start()
-t2.start()
+x1 = threading.Thread(target=sender)
+x2 = threading.Thread(target=receiver)
+x1.start()
+x2.start()
