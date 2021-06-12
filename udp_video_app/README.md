@@ -3,7 +3,7 @@ About
 This repository contains the code of the video streaming app using socket in python.
 In this app , we are using UDP protocol for video streaming.
 
-##### Requirements
+### Requirements
 
 1. pip install opencv-python
 2. pip install numpy
