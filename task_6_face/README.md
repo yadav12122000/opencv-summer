@@ -1,4 +1,4 @@
-### Face Detection Model
+### Face Recognition Model
 1. Create the database using your face.
 2. Train the model
 3. Predict using the trained model.
